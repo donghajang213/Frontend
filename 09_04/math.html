@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function math_click(type){
+        let x = parseFloat(document.getElementById("test").value);
+        if (type == 1)
+            y = Math.sin((x * Math.PI) / 180.0);
+        else if (type == 2)
+             y = Math.log(x);
+        else if (type == 3)
+            y = Math.sqrt(x);
+        else if (type == 4)
+            y = Math.abs(x);
+        document.getElementById("result").value =y;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        입력:<input type = "number" id = "test" value = ""><br>
+        계산 결과: <input type = "number" id = "result" value = ""><br>
+        <input type = "button"onclick = "math_click(1)" value="SIN">
+        <input type = "button"onclick = "math_click(2)" value="LOG">
+        <input type = "button"onclick = "math_click(3)" value="SQRT">
+        <input type = "button"onclick = "math_click(4)" value="ABS">
+    </form>
+    
+</body>
+</html>

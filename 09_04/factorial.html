@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <script>
+    let y = 1
+    function fac(){
+    let x = document.getElementById("num").value;
+    for (i = 0; i < x; i++){
+         y *= x-i
+    }
+        document.getElementById("res").innerHTML = "정수 " + x + "의 팩토리얼: " + y;
+    }
+</script> -->
+<script>
+    function fac(event){
+        event.preventDefault();
+        let i, num, f;
+        f = 1;
+        num = document.getElementById("num").value;
+
+        for (i = 1; i <= num; i++) {
+            f = f * i;
+        }
+        document.getElementById("res").innerHTML = "정수 " + num + "의 팩토리얼: " +f;
+        
+        
+    }
+</script>
+<body>
+    <h1>팩토리얼을 계산해봅시다!!</h1>
+    <form>
+        정수를 입력하시오: 
+        <input id = "num"> <P>
+        <button type = "button" onclick = "fac(event)">팩토리얼 계산</button>
+        <input type = "reset" value = "초기화">
+        <p id = "res"></p>
+    </form>
+</body>
+</html>

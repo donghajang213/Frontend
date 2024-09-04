@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "lang">"다음에 학습할 내용은 HTML입니다."</p>
+    <script>
+        function handleclick(event){
+        event.preventDefault();
+        let len = document.getElementById("lang").innerHTML;
+
+        if (len.includes("HTML")){
+        document.getElementById("lang").innerHTML = len.replace("HTML", "JAVASCRIPT")
+        }
+        let but = document.getElementById("butt").innerHTML;
+
+        if (but.includes("HTML"))
+        document.getElementById("butt").innerHTML = but.replace("HTML", "JAVASCRIPT")
+    }
+    </script>
+    <form>
+        <button id = "butt" onclick="handleclick(event)">HTML 학습을 끝냈으면 누르세요.</button>
+    </form>
+    
+</body>
+</html>
