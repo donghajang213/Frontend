@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        #dice {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            font-size: 200px;
+            border-radius: 20%;
+            margin: 3%;
+            }
+
+    </style>
+
+    <script>
+    function randomDice(){ 
+        let result = Math.floor(Math.random()*6) + 1;
+        let dice = document.getElementById("dice");
+        dice.innerHTML = result;
+
+    }
+</script>
+</head>
+<body>
+    <form>
+        <h2>주사위 굴리기 게임입니다.</h2>
+        <p id ="dice"></p>
+        <input type = "button" onclick = "randomDice()" value = "주사위 굴리기">
+    </form>
+    
+</body>
+</html>

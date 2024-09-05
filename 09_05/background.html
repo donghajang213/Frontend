@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function back(c){
+            document.getElementById("target").style.backgroundColor = c;
+        }
+    </script>
+</head>
+<body id = "target">
+    <form method = "post">
+        <input type = "radio" name = "c1" value = "v1"
+        onclick="back('lightblue')">파란색
+        <input type = "radio" name = "c1"  value = "v2"
+        onclick="back('lightgreen')">초록색
+    </form>
+    
+</body>
+</html>

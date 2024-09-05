@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <img id = "image" src = "../image/dog.jpg" width="200" height="200">
+    <script>
+        let isDog = true;
+
+        function changeImage(){
+            if (isDog){
+            document.getElementById("image").src = "../image/cat.jpg";
+            } else {
+                document.getElementById("image").src = "../image/dog.jpg"
+            } isDog = !isDog;
+        }
+    </script>
+
+</head>
+<body>
+    <form>
+        <input type = "button" onclick="changeImage()" value = "눌러보세요">
+    </form>
+    
+</body>
+</html>

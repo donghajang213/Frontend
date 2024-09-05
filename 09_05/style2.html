@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let isWhiteMode = true;
+        function cs(){
+            if (isWhiteMode){
+            document.getElementById("back").style.background = "black";
+            document.getElementById("back").style.color = "white";
+        }else {
+            document.getElementById("back").style.background = "white";
+            document.getElementById("back").style.color = "black";
+        }
+        isWhiteMode = !isWhiteMode;
+    }
+    </script>
+</head>
+<body id = "back">
+    <h2>다크 모드와 라이트 모드</h2>
+    <p>버튼을 누르면 다크 모드와 라이트 모드가 토글됩니다.</p>
+    <input type = "button" onclick = "cs()" value = "다크모드 토글">
+    
+</body>
+</html>
