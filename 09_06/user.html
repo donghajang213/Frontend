@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function user_id(){
+            const id = "aaaaa";
+            if (document.getElementById("id").value == id) {
+                alert("중복된 아이디입니다.")
+            }
+            else {
+                alert(document.getElementById("id").value + " 사용가능한 아이디입니다.")
+            }
+            
+        }
+        function user_input(elem, msg){
+            let pwdCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/; 
+            let pwd = document.getElementById("pwd").value;
+            let pwdConfirm = document.getElementById("pwd_confirm").value;
+
+            if (!pwd.match(pwdCheck)) {
+                alert(msg);
+                elem.focus();
+                return true;
+
+            if (pwd !== pwdConfirm) {
+                alert("비밀번호가 일치하지 않습니다.");
+                return false;
+            }
+
+            alert("비밀번호가 일치합니다.");
+                return true;
+  
+        }
+    }
+    </script>
+
+
+    
+</head>
+<body>
+    <form>
+        아이디 <input type = "text" id = "id" value = "">
+        <input type = "button" onclick = "user_id()" value="중복확인"><br>
+        비밀번호 <input type = "password" id = "pwd" value = "" placeholder = "영문자+숫자+특수문자 조합(8~25자리 입력)"><br>
+        비밀번호 재확인 <input type = "password" id = "pwd_confirm" value = ""><br>
+        이름 <input type = "text" id = "" value = ""><br>
+        생년월일 <input type = "num" id = "" value = "" placeholder = "년(4자)">
+        <select>
+            <option id = "jan">1</option>
+            <option id = "feb">2</option>
+            <option id = "mar">3</option>
+            <option id = "apr">4</option>
+            <option id = "may">5</option>
+            <option id = "jun">6</option>
+            <option id = "jul">7</option>
+            <option id = "aug">8</option>
+            <option id = "sep">9</option>
+            <option id = "oct">10</option>
+            <option id = "nov">11</option>
+            <option id = "dec">12</option>
+        </select>
+        <input type = "num" id = "" value = "" placeholder="일"><br>
+        성별 <input type = "radio" id = "" name = "gender">여
+        <input type = "radio" id = "" name = "gender">남<br>
+        전화번호<input type = "text" id = "phone"> ex "-" 없이 숫자만 입력<br>
+        약관동의 <input type = "checkbox" id = "">약관에 동의합니다<br>
+        <input type = "reset" id = "" value = "초기화">
+        <input type = "button" onclick="user_input(this, '비밀번호는 영문자, 숫자, 특수문자를 포함한 8자 이상 25자 이하로 입력해야 합니다.')" value="가입하기">
+    </form>
+</body>
+</html>

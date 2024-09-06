@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkAnswer() {
+            // 정답을 계산
+            let correctAnswer = eval(12*2+20-30);
+
+            // 사용자가 입력한 값을 가져옴
+            let userAnswer = document.getElementById("te").value;
+
+            // 숫자 비교를 위해 사용자가 입력한 값을 정수로 변환
+            userAnswer = parseInt(userAnswer);
+
+            // 정답과 사용자의 입력값을 비교하여 결과를 alert로 표시
+            if (userAnswer === correctAnswer) {
+                alert("정답입니다!");
+            } else {
+                alert("틀렸습니다! 정답은 " + correctAnswer + "입니다.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Math Quiz</h1>
+    <form>
+        <!-- 문제는 보여주기만 하므로 readonly로 설정 -->
+        <input type="text" value="12*2+20-30" readonly><br>
+        <!-- 사용자가 입력할 부분 -->
+        <input type="text" id="te" placeholder="답을 입력하세요"><br>
+        <!-- 버튼을 클릭하면 checkAnswer 함수가 실행됨 -->
+        <input type="button" value="정답 알아보기" onclick="checkAnswer()">
+    </form>
+</body>
+</html>
